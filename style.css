@@ -1,82 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+}
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "sidebar-left content  sidebar-right"
+    "footer footer footer";
+  background: linear-gradient(white, rgb(62, 103, 226));
+  gap: 30px;
+  height: 70%;
+  width: 80%;
+  margin: 50px auto;
+  padding:30px;
+  grid-template-rows: 45px 230px 45px;
+  grid-template-columns: 150px auto 150px;
+}
+.header {
+  background: rgb(143, 135, 137);
+  grid-area: header;
+}
+p {
+  color: white;
+  font-size: 23px;
+  padding: 10px 15px;
+}
+.sidebar-left {
+  background: rgb(65, 64, 64);
+  grid-area: sidebar-left;
+  border-radius: 5px;
+}
 
-.caixa-principal{
-      width: 940px;
-      background: linear-gradient(white, rgb(62, 103, 226));
-      height: 400px;
-      margin: 100px auto;
-      border-radius: 5px;
-      
-    }
-    .caixa1{
-        width: 90%;
-        height: 50px;
-        background: rgb(143, 135, 137);
-        border-radius: 5px;
-        margin: 10px auto;
-        position: relative;
-        top: 10px;
-    }
-    .caixa1 p{
-        color: white;
-        font-size: 23px;
-        padding: 10px 15px;
-    }
-    .caixa2{
-        width: 15%;
-        background: rgb(65, 64, 64);
-        height: 130px;
-        position: relative;
-        top: 20px;
-        left: 47px;
-        border-radius: 5px;
-    
-    }
-    .caixa2 p{
-        color: white;
-        font-size: 23px;
-        padding: 10px 15px;
-    }
-    .caixa3{
+.content {
+  background: rgb(65, 64, 64);
+  grid-area: content;
+}
 
-        width: 55%;    
-        height: 130px;
-        background: rgb(65, 64, 64);
-        position: relative;
-        top: -133px;
-        left:210px;
-        border-radius: 5px;
-    }
-    .caixa3 p{
-        color: white;
-        font-size: 23px;
-        padding: 10px 15px;
+.sidebar-right {
+  background-color: rgb(180, 179, 179);
+  grid-area: sidebar-right;
+}
 
-    }
-    .caixa4{
-        width: 15%;
-        height: 130px;
-        background: rgb(180, 179, 179);
-        border-radius: 5px;
-        position: relative;
-        left:80%;
-        top: -71.5%;
-    }
-    .caixa4 p{
-        font-size: 23px;
-        padding: 10px 15px;
-
-    }
-    .caixa5{
-        width: 90%;
-        height: 50px;
-        background: rgb(143, 135, 137);
-        border-radius: 5px;
-        position: relative;
-        top: -275px;
-        left: 46.5px;
-    }
-    .caixa5 p{
-        font-size: 23px;
-        color: white;
-        padding: 10px 15px;
-    }
+.footer {
+  background: rgb(143, 135, 137);
+  grid-area: footer;
+}
+div {
+  border-radius: 5px;
+}
